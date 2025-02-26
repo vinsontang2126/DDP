@@ -56,8 +56,8 @@ def get_model(model_name):
 # 训练主函数
 def main():
     parser = argparse.ArgumentParser(description="Distributed Training Example")
-    parser.add_argument("--epochs", type=int, default=1, help="number of total epochs")
-    parser.add_argument("--batch_size", type=int, default=1, help="batch size for training")
+    parser.add_argument("--epochs", type=int, default=10, help="number of total epochs")
+    parser.add_argument("--batch_size", type=int, default=128, help="batch size for training")
     parser.add_argument("--local-rank", type=int, default=-1, help="local_rank for distributed training on gpus")
     os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3'
     args = parser.parse_args()
