@@ -74,7 +74,7 @@ def main():
 
     # 创建数据加载器
     max_len = 32  # 可以适当提高max_len以捕捉更多上下文
-    batch_size = 4  # 减小batch_size以适应显存
+    batch_size = 32  # 减小batch_size以适应显存
     train_dataset = NewsDataset(
         texts=dataset['train']['text'],
         labels=dataset['train']['label'],
